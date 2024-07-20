@@ -15,9 +15,69 @@
    border-top: 5px solid #e5e7eb;
 }
 
+.gridsf{
+    display: flex;
+    background-color: black;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-gap: 2rem;
+    background-color: #fff;
+    border-top: 5px solid #e5e7eb;
+}
+
+
 img{
     width: 100%;
     height: 100%;
     object-fit: fill;
     border-radius: 5px;
 }
+
+img:hover{
+    filter: drop-shadow(5px 5px 15px black);
+    
+}
+
+
+.abuttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.imgbu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .7rem 1.5rem;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    font-family: inherit;
+    border: 5px solid #e5e7eb;
+}
+
+
+form{
+    position: relative;
+    width: 100%;
+    
+    }

@@ -6,6 +6,7 @@ import { Watchlist } from './components/Watchlist';
 import { Watched } from './components/Watched';
 import { Add } from './components/Add';
 import './lib/all.min.css'
+import AnimeInfo from './components/AnimeInfo';
 // import { useGlobalContext } from './context/global';
 
 function App() {
@@ -16,9 +17,11 @@ function App() {
       <Header/> 
         <Routes>
 
-        <Route path="/" element={<Watchlist />} />
+        <Route path="/" element={<Add />} />
         <Route path="/Watched" element={<Watched />} />
         <Route path="/Add" element={<Add />} />
+        <Route path="/anime/:animeid" element={<AnimeInfo />} />
+        
         </Routes>
    </Router>
   );

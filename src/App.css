@@ -13,8 +13,7 @@ body {
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
+
   margin-right: auto;
   margin-left: auto;
 }
@@ -81,7 +80,7 @@ header .inner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px 0; /* bar length*/
 }
 
 header a {
