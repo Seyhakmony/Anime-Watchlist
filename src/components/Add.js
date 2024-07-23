@@ -1,15 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { useGlobalContext } from '../context/global';
 import './add.css'
-export const Add = () => {
-  const [inputq, setQu] = useState("");
-  const [showPopular, showPop] = useState(false);
 
-  const onChange = e => {
-    e.preventDefault();
-      setQu(e.target.value)
-  }
+
+export const Add = () => {
+
+  console.log = console.warn = console.error = console.info = function () {};   
 
 
   const {popularAnime, isSearch, searchR, upanime, airanime} =  useGlobalContext();
@@ -68,34 +65,21 @@ export const Add = () => {
 
 
 
-  const pop = () => {
-    showPop(true);
-  }
-
-  const npop = () => {
-    showPop(false);
-  }
-
-
-
-
-
-
 const [render, setRender] = React.useState('popular')
 
 
-const {searchingA, handleC, handleS, search, upcomingA, airA} = useGlobalContext()
+const {handleC, handleS, search, upcomingA, airA} = useGlobalContext()
 
 const switchR = () => {
     switch(render){
       case 'popular':
-        return <div className="popAnime">{tempC()}</div>
+        return <div className='borderA'><div className="popAnime">{tempC()}</div></div>
       case 'airing':
-        return <div className = "gridsf">{airanimef()}</div>
+        return <div className='borderA'><div className = "gridsf">{airanimef()}</div></div>
       case 'upcoming':
-        return <div className = "gridsf">{upcoming()}</div>
+        return <div className='borderA'><div className = "gridsf">{upcoming()}</div></div>
       default:
-        return <div className="popAnime">{tempC()}</div>
+        return <div className='borderA'><div className="popAnime">{tempC()}</div></div>
     }
 
 }
@@ -103,29 +87,20 @@ const switchR = () => {
   return (
    
 
-      <div>
-        <h1>Add page</h1>
+      <div className='entireAddp'>
         <div className= 'add-page'>
           <div className = 'container'> 
             <div className = 'add-content'> 
                 <div className = 'input-wrapper'> 
-                  {/* <input type = "text" 
-                  
-                  placeholder = 'Search Anime'
-                  
-                  value = {inputq}
-                  onChange= {onChange}
-                  /> */}
 
                   <form action = "" className='searchAnime' onSubmit={handleS}>
-                    <div className='inputText'>
+                    <div className='inputTexts'>
                       <input type = "text" placeholder = 'Search Anime'
                       value = {search}
                       onChange = {handleC}
                       />
-                      <button type = "submit">Search</button>
+                      <button className ='submit 'type = "submit">Search</button>
                     </div>
-
                       <div className='totalAnimef'>
                       {isSearch && (
                         <p className='totalFanime'>Total Results: {searchR.length}</p>
@@ -140,8 +115,8 @@ const switchR = () => {
 
 
 
-        {!showPopular && (
-        <div className="">
+
+        <div className="allTa">
 
             <div className="popular">
           {/* <button onClick={pop}>Popular</button> */}
@@ -153,7 +128,7 @@ const switchR = () => {
 
           <div className='abuttons'>
 
-            <div className='sbutton'>
+            <div className='abutton'>
               <button onClick = {() => {
                 setRender('popular')
               }}>Popular</button>
@@ -167,7 +142,7 @@ const switchR = () => {
             </div>
 
 
-            <div className='upbutton'>
+            <div className='abutton'>
               <button onClick = {() => {
                 setRender('upcoming')
                 upcomingA()
@@ -182,18 +157,7 @@ const switchR = () => {
 
         </div>
         
-      )}
 
-
-
-
-      {showPopular && (
-        <div className="popular">
-          <h2>Popular Anime  <button onClick={npop}>x</button> </h2>
-          
-          <div className="popAnime"> {tempC()}</div>
-        </div>
-      )}
 
 
       {switchR()}

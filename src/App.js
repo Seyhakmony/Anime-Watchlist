@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
-import { Watchlist } from './components/Watchlist';
-import { Watched } from './components/Watched';
+import  Watchlist  from './components/Watchlist';
+import  Watched  from './components/Watched';
 import { Add } from './components/Add';
-import './lib/all.min.css'
+
 import AnimeInfo from './components/AnimeInfo';
 // import { useGlobalContext } from './context/global';
 
@@ -19,7 +19,10 @@ function App() {
 
         <Route path="/" element={<Add />} />
         <Route path="/Watched" element={<Watched />} />
-        <Route path="/Add" element={<Add />} />
+        <Route path="/WatchList" element={<Watchlist />} />
+
+        {/* <Route path="/Add" element={<Add />} /> */}
+
         <Route path="/anime/:animeid" element={<AnimeInfo />} />
         
         </Routes>

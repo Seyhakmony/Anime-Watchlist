@@ -1,0 +1,135 @@
+.watchlist-page, .watched-page{
+    padding-left: 20px;
+    padding-top: 1rem;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.watchh{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: solid underline 4px;;
+}
+
+
+.anime-grid {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+    border: thick double white;
+    
+    border: 1rem solid #e5e7eb;
+    border-radius: 10px;
+    background-color: #e5e7eb;
+
+}
+
+.anime {
+    display: flex;
+    width: 100%;
+    border: thick double #32a1ce;
+}
+
+
+.anime-card {
+    display: flex;
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* .anime-card:hover {
+    transform: scale(1.05);
+} */
+
+.animeI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    color: black;
+    border: thick double black;
+}
+
+
+.anime-image-cell, .anime-details-cell, .anime-actions-cell {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.anime-image-cell {
+    width: 150px;
+    padding-right: 20px;
+    flex-shrink: 0;
+    border-left: thick double black;
+    border-top: thick double black;
+    border-bottom: thick double black;
+}
+
+.anime-details-cell {
+    flex-grow: 1;
+    padding-left: 20px;
+    border-top: thick double black;
+    border-bottom: thick double black;
+}
+
+.anime-actions-cell {
+    flex-shrink: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    border: thick double black;
+}
+
+.anime-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+}
+
+.anime-details {
+    padding: 10px;
+}
+
+.anime-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.anime-details p {
+    font-size: 14px;
+    color: #555;
+}
+
+.anime-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.anime-actions button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.anime-actions button:hover {
+    background-color: #0056b3;
+}

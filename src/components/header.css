@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+:root {
+  --primary: #032541;
+  --secondary: #21d07a;
+  --white: #fff;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+input:focus {
+  outline: none;
+}
+
+
+
+
+
+.buttonAdd{
+    position:relative;
+    display:inline-block;
+    margin:20px;
+  }
+  
+  .buttonAdd a{
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration:none;
+    background-color:#18cca5;
+    display:block;
+    position:relative;
+    padding: 10px 15px;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+    
+    -webkit-box-shadow:inset 0 1px 0 #18cca5, 0 10px 0 #03362b;
+    -moz-box-shadow:inset 0 1px 0 #18cca5, 0 10px 0 #03362b;
+    box-shadow:inset 0 1px 0 #18cca5, 0 5px 0 #03362b;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  
+  .buttonAdd a:active{
+    top:10px;
+    background-color:#18cca5;
+    
+    -webkit-box-shadow:inset 0 1px 0 #18cca5, inset 0 -3px 0 #03362b;
+    -moz-box-shadow:inset 0 1px 0 #18cca5, inset 0 -3pxpx 0 #03362b;
+    box-shadow:inset 0 1px 0 #18cca5, inset 0 -3px 0 #03362b;
+  }
+  
+  .buttonAdd:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+/* Header Styles */
+header {
+  background-color: var(--primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .inner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header a {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+header a:hover {
+  opacity: 0.8;
+}
+
+/* header .brand a {
+  font-weight: 700;
+  font-size: 1.75rem;
+} */
+
+
+  .brand-img{
+    height: 100%;
+    width: 40%;
+    min-width: 75px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+header .nav-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header .nav-links li {
+  display: inline-block;
+  margin-right: 25px;
+}
+
+header .nav-links li:last-child {
+  margin-right: 0;
+}
+
+/* Add Page */
+.add-content {
+  padding: 50px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-content .input-wrapper {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  color: var(--white);
+  font-size: 1.55rem;
+}

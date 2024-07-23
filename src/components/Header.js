@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './header.css';
+import animep from './anime.jpg'
 
 export const Header = () => {
   return (
@@ -7,23 +9,33 @@ export const Header = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to="/">WatchList</Link>
+            {/* <Link to="/">WatchList</Link> */}
+            <Link to="/">
+              <img src= {animep} alt="WatchList" className="brand-img" />
+              </Link>
           </div>
 
           <ul className="nav-links">
             <li>
-              <Link to="/">Watch List</Link>
+              <Link to="/watchlist">Watchlist</Link>
             </li>
 
             <li>
-              <Link to="/watched">Watched</Link>
+              <Link to="/watched">Watchedlist</Link>
             </li>
 
+
             <li>
-              <Link to="/add" className="btn btn-main">
-                + Add
-              </Link>
+              <div ontouchstart="">
+                <div class="buttonAdd">
+                <Link to="/">
+                    + Add
+                  </Link>
+                </div>
+              </div>
             </li>
+
+
           </ul>
         </div>
       </div>

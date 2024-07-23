@@ -1,8 +1,34 @@
 
 .popAnime{
    display: flex;
+   background-color: grey;
+   margin-top: 1rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   padding-left: 5rem;
+   padding-right: 5rem;
+   border-radius: 15px;
+   width: 95%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   grid-gap: 2rem;
+   /* background-color: #fff; */
+   border: 4px solid #e5e7eb;
+}
+
+.borderA{
+
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.gridsf{
+    /* display: flex;
    background-color: black;
-   margin-top: 2rem;
+   margin-top: 1rem;
    padding-top: 2rem;
    padding-bottom: 2rem;
    padding-left: 5rem;
@@ -11,12 +37,10 @@
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
    grid-gap: 2rem;
-   background-color: #fff;
-   border-top: 5px solid #e5e7eb;
-}
+   /* background-color: #fff; */
+   /* border-top: 4px solid #e5e7eb; */ 
 
-.gridsf{
-    display: flex;
+    /* display: flex;
     background-color: black;
     margin-top: 2rem;
     padding-top: 2rem;
@@ -28,9 +52,32 @@
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     grid-gap: 2rem;
     background-color: #fff;
-    border-top: 5px solid #e5e7eb;
+    border-top: 5px solid #e5e7eb; */
+
+    display: flex;
+   background-color: grey;
+   margin-top: 1rem;
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   padding-left: 5rem;
+   padding-right: 5rem;
+   border-radius: 15px;
+   width: 95%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   grid-gap: 2rem;
+   /* background-color: #fff; */
+   border: 4px solid #e5e7eb;
 }
 
+.entireAddp{
+    background-color: black;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    padding-bottom: 10px;
+}
 
 img{
     width: 100%;
@@ -39,8 +86,9 @@ img{
     border-radius: 5px;
 }
 
-img:hover{
-    filter: drop-shadow(5px 5px 15px black);
+.entireAddp img:hover{
+    filter: drop-shadow(10px 10px 15px white)
+    drop-shadow(1px 1px 15px blue);
     
 }
 
@@ -53,31 +101,115 @@ img:hover{
 }
 
 
+
+.inputText input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
 .imgbu{
     display: flex;
+    
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+
+    margin-bottom: 1rem;
+    font-family: Fantasy, Copperplate;
+    max-width: fit-content;
+    margin: 0 auto 1rem;    
+    padding-right: 5%;
+    padding-left: 5%;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+    border-radius: 20px;
+    font-size: 2.5rem;
+    color: rgb(7, 78, 145);
+
+    border: 5px solid grey;
+    background-color: #e5e7eb;
+    box-sizing: content-box;
 }
 
-button{
+.add-content{
+    padding-top: 25px;
+    max-width: 100%;
+    margin: 0 auto;
+      
+}
+
+
+/* container is the inside */
+.inputTexts{
     display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .7rem 1.5rem;
-    outline: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    background-color: #fff;
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-    font-family: inherit;
-    border: 5px solid #e5e7eb;
+    justify-content: space-evenly;
+    
+}
+
+.inputTexts input {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+width: 80%;
+padding-right: 2px;
+
 }
 
 
+.submit{
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+.submit:hover{
+    background-color: grey;
+}
+
+
+.abuttons{
+    display: flex;
+    width: 100%;
+
+    align-content: center;
+    justify-content: center;
+    
+    gap: 5%;
+}
+.abutton{
+    padding-top: 20px;
+}
+.abutton button{
+    background-color: white;
+    color: #333;
+
+    border-radius: 10px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+  }
+.totalAnimef{
+    font-size: 1rem;
+    color: black;
+}
+.abutton button:hover{
+    background-color: grey;
+    border-radius: 10px;
+
+    /* padding: 10px 15px; */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    filter: drop-shadow(10px 10px 15px white)
+    drop-shadow(1px 1px 15px blue);
+}
 form{
     position: relative;
     width: 100%;
     
     }
+

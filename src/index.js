@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom/client';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { GlobalContextProvider } from './context/global';
+import { GlobalContextProvider, StoreGlobalProvider } from './context/global';
+console.log = console.warn = console.error = console.info = function () {};   
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalContextProvider> 
+      <StoreGlobalProvider>
       <App/>
+      </StoreGlobalProvider>
     </GlobalContextProvider>
   </React.StrictMode>
 );
