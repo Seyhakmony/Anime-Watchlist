@@ -1,4 +1,6 @@
 {
+  "homepage": ".",
+
   "name": "anime-watchlist",
   "version": "0.1.0",
   "private": true,

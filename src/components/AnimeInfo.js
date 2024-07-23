@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './animeinfo.css'
 import { useStoreGlobalContext } from '../context/global';
@@ -25,7 +25,7 @@ function AnimeInfo() {
             pickedAnime(data.data);
             // console.log(data.data);
         } catch (error) {
-            // console.error('Error fetching anime info:', error);
+            console.error('Error fetching anime info:', error);
         }
     };
 
@@ -45,41 +45,49 @@ function AnimeInfo() {
     }, [watchlist, watched, anime.mal_id]);
 
 
-    const handleAddToWatchlist = async () => {
+    const handleAddToWatchlist = () => {
         if (watchlist.some((item) => item.mal_id === anime.mal_id)) {
             removeMovieFromWatchlist(anime.mal_id);
             setisWatch(false);
-        }
-        else if(watched.some((item) => item.mal_id === anime.mal_id) && (setisWatched)){
+        } else if (watched.some((item) => item.mal_id === anime.mal_id) && setisWatched) {
             addMovieToWatchlist(anime);
             removeFromWatched(anime.mal_id);
             setisWatched(false);
             setisWatch(true);
-        }
-        else{
+        } else {
             addMovieToWatchlist(anime);
             setisWatch(true);
         }
-        
-      };
+    }
+
     
-    const handleAddToWatched = async () => {
+    const handleAddToWatched = () => {
         if (watched.some((item) => item.mal_id === anime.mal_id)) {
-            removeFromWatched(anime.mal_id); 
+            removeFromWatched(anime.mal_id);
             setisWatched(false);
-        }
-        else if((watchlist.some((item) => item.mal_id === anime.mal_id) && (setisWatch))){
+        } else if ((watchlist.some((item) => item.mal_id === anime.mal_id) && setisWatch)) {
             removeMovieFromWatchlist(anime.mal_id);
             addMovieToWatched(anime);
-            setisWatch(false); 
+            setisWatch(false);
             setisWatched(true);
-        }
-        else{
+        } else {
             addMovieToWatched(anime);
             setisWatched(true);
         }
-        
-    };
+    }
+
+    useEffect(() => {
+        function handleTouchStart(event) {
+            // event.preventDefault(); 
+        }
+
+        document.addEventListener('touchstart', handleTouchStart, { passive: true });
+
+        return () => {
+            document.removeEventListener('touchstart', handleTouchStart);
+        };
+    }, []);
+
 
   return (
     <div className='entire'>

@@ -120,7 +120,8 @@ header .inner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0px;
+  
 }
 
 header a {
@@ -131,18 +132,23 @@ header a {
 }
 
 header a:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 /* header .brand a {
   font-weight: 700;
   font-size: 1.75rem;
 } */
-
+.brand{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    
+    
+}
 
   .brand-img{
     height: 100%;
-    width: 40%;
+    width: 100%;
     min-width: 75px;
     padding-right: 10px;
     cursor: pointer;
