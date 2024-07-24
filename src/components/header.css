@@ -13,11 +13,9 @@ body {
 }
 
 .container {
-  max-width: 1170px;
   /* margin-right: auto; */
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
   box-sizing: border-box;
   /* margin-left: auto; */
   /* margin-left: 90%; */
@@ -48,57 +46,45 @@ body {
 
 
 @media (max-width: 600px) {
-  .container {
-    padding: 0 10px; /* Adjusted padding */
-  }
-
   .brand-img {
-    max-width: 40px; /* Adjusted for smaller screens */
-    max-height: 20px; /* Adjusted for smaller screens */
+    max-width: 50px;
+    max-height: 25px;
   }
 
   .buttonall {
-    margin-right: 0; /* Removed margin */
+    margin-right: 5%;
   }
 
   header .nav-links {
-    width: 100%;
-    flex-direction: row; /* Stack items vertically */
-    gap: 10px; /* Reduced gap between items */
+    width: 100%; 
   }
 
   header .nav-links li {
-    margin: 0; /* Removed margin */
-    font-size: 0.25rem;
-    
+    margin-right: 0.1px;
+    margin-bottom: 10px; 
   }
 
-  header a {
-    font-size: 0.3rem; /* Increased font size slightly for readability */
+  header .nav-links li:last-child {
+    margin-bottom: 0;
   }
 
   .buttonAdd {
-    font-size: 0.35rem; /* Reduced font size */
-    padding: 0.1em 0.1em;
-    
+    font-size: 0.75rem;
+    padding: 0.3em 0.5em;
+    max-width: 35%;
   }
 
   .buttonAdd a {
-    font-size: 0.35rem; /* Reduced font size */
-    padding: 0.1em 0.1em; 
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+    display: inline-block;
   }
 
-  .inner-content {
-    gap: 5px; /* Reduced gap */
+
+  .inner-content{
+    gap: 10px;
   }
 
-  .add-content {
-    padding: 5% 10px; /* Adjusted padding */
-  }
-
-  .add-content .input-wrapper {
-    font-size: 0.2rem; /* Adjusted font size */
-  }
 
   
 }
@@ -136,7 +122,7 @@ input:focus {
     background-color:#18cca5;
     display: inline-block;
     /* position:relative; */
-    padding: 5% 15px;
+    padding: 10.5% 100%;
     
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
@@ -194,7 +180,7 @@ header .inner-content {
   max-width: 1170px;
   align-items: center;
   /* padding: 2.5% 0; */
-  padding: 2.5% 15px;
+  padding: 2.5% 0;
   box-sizing: border-box;
   
 }
@@ -254,7 +240,7 @@ header .nav-links li:last-child {
 
 /* Add Page */
 .add-content {
-  padding: 5% 15px;
+  padding: 5% 0;
   max-width: 100%;
   margin: 0 auto;
 }
