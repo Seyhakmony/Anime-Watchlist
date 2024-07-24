@@ -13,26 +13,80 @@ body {
 }
 
 .container {
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto; */
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* margin-left: auto; */
+  /* margin-left: 90%; */
+
 }
 
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
+  
+  
 }
 
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  
 }
 
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
+
+}
+
+
+@media (max-width: 600px) {
+  .brand-img {
+    max-width: 50px;
+    max-height: 25px;
+  }
+
+  .buttonall {
+    margin-right: 5%;
+  }
+
+  header .nav-links {
+    width: 100%; 
+  }
+
+  header .nav-links li {
+    margin-right: 0.1px;
+    margin-bottom: 10px; 
+  }
+
+  header .nav-links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .buttonAdd {
+    font-size: 0.75rem;
+    padding: 0.3em 0.5em;
+    max-width: 35%;
+  }
+
+  .buttonAdd a {
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+    display: inline-block;
+  }
+
+
+  .inner-content{
+    gap: 10px;
+  }
+
+
+  
 }
 
 *,
@@ -53,7 +107,9 @@ input:focus {
 .buttonAdd{
     position:relative;
     display:inline-block;
-    margin:20px;
+    margin: 0;
+    padding-right: 0; 
+    /* padding: 10% 30%; */
   }
   
   .buttonAdd a{
@@ -64,9 +120,9 @@ input:focus {
     text-align: center;
     text-decoration:none;
     background-color:#18cca5;
-    display:block;
-    position:relative;
-    padding: 10px 15px;
+    display: inline-block;
+    /* position:relative; */
+    padding: 10.5% 100%;
     
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     text-shadow: 0px 1px 0px #000;
@@ -114,13 +170,18 @@ input:focus {
 header {
   background-color: var(--primary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 header .inner-content {
   display: flex;
   justify-content: space-between;
+  width:100%;
+  max-width: 1170px;
   align-items: center;
-  padding: 10px 0px;
+  /* padding: 2.5% 0; */
+  padding: 2.5% 0;
+  box-sizing: border-box;
   
 }
 
@@ -143,6 +204,7 @@ header a:hover {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     
+    /* width: 30%; */
     
 }
 
@@ -150,6 +212,7 @@ header a:hover {
     height: 100%;
     width: 100%;
     min-width: 75px;
+
     padding-right: 10px;
     cursor: pointer;
     border-radius: 15px;
@@ -161,28 +224,31 @@ header .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 10%;
 }
 
 header .nav-links li {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 2px 0;
 }
-
+.buttonall{
+  margin-right: 20%;
+}
 header .nav-links li:last-child {
-  margin-right: 0;
+  margin-right: 10px;
 }
 
 /* Add Page */
 .add-content {
-  padding: 50px 0;
-  max-width: 600px;
+  padding: 5% 0;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .add-content .input-wrapper {
   width: 100%;
   background-color: white;
-  padding: 10px;
+  padding: 2.5%;
   border-radius: 15px;
   border: none;
   color: var(--white);

@@ -133,3 +133,76 @@
 .anime-actions button:hover {
     background-color: #0056b3;
 }
+
+
+@media (max-width: 600px) {
+    .watchlist-page, .watched-page {
+        padding-left: 10px;
+        padding-top: 0.5rem;
+    }
+
+    .anime-grid {
+        width: 100%;
+        padding: 0;
+    }
+
+    .anime-card {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .anime {
+        flex-direction: column;
+        align-items: center;
+        border-image: linear-gradient(70deg, #32a1ce, black) 1
+    }
+
+    .anime-image-cell {
+        width: 100%;
+        padding-right: 0;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    .anime-image {
+        max-width: 30%;
+        height: auto;
+    }
+
+    .anime-details-cell {
+        padding-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .anime-actions-cell {
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .anime-actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .anime-actions button {
+        padding: 8px;
+        margin: 0;
+        width: 48%;
+    }
+
+    .anime-details h3 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .anime-details p {
+        font-size: 12px;
+    }
+}

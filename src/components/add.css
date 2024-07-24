@@ -3,10 +3,7 @@
    display: flex;
    background-color: grey;
    margin-top: 1rem;
-   padding-top: 2rem;
-   padding-bottom: 2rem;
-   padding-left: 5rem;
-   padding-right: 5rem;
+   padding: 2rem 3%;
    border-radius: 15px;
    width: 95%;
    display: grid;
@@ -59,7 +56,7 @@
    margin-top: 1rem;
    padding-top: 2rem;
    padding-bottom: 2rem;
-   padding-left: 5rem;
+   padding-left: 2rem;
    padding-right: 5rem;
    border-radius: 15px;
    width: 95%;
@@ -93,12 +90,6 @@ img{
 }
 
 
-.abuttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
 
 
 
@@ -131,7 +122,7 @@ img{
 }
 
 .add-content{
-    padding-top: 25px;
+    padding-top: 2.5%;
     max-width: 100%;
     margin: 0 auto;
       
@@ -173,23 +164,27 @@ padding-right: 2px;
 
 .abuttons{
     display: flex;
-    width: 100%;
-
-    align-content: center;
     justify-content: center;
-    
-    gap: 5%;
+    align-items: center; 
+    gap: 30px; 
+    flex-wrap: wrap;
+    padding: 10px;
 }
 .abutton{
-    padding-top: 20px;
+    flex: 0 1 auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 .abutton button{
-    background-color: white;
-    color: #333;
-
-    border-radius: 10px;
-    padding: 15px 50px;
-    font-size: 1.2rem;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
     transition: background-color 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
   }
 .totalAnimef{
@@ -213,3 +208,26 @@ form{
     
     }
 
+
+    @media (max-width: 600px) {
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: fill;
+            border-radius: 5px;
+        }
+        .popAnime {
+            padding: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+        
+        .abuttons {
+            gap: 5px;
+        }
+        
+        .abutton button {
+            padding: 8px 12px;
+            font-size: 0.8rem;
+        }
+        
+    }

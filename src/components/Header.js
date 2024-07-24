@@ -26,7 +26,7 @@ export const Header = () => {
 
 
             <li>
-              <div ontouchstart="">
+              <div ontouchstart="" className="buttonall">
                 <div class="buttonAdd">
                 <Link to="/">
                     + Add
