@@ -220,6 +220,11 @@ form{
             padding: 1rem;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
         }
+
+        .gridsf{
+            padding: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
         
         .abuttons {
             gap: 5px;
