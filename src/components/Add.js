@@ -14,15 +14,19 @@ export const Add = () => {
   const tempC = () => {
     if(!isSearch && render === 'popular'){
       return popularAnime?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                  <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }else{
       return searchR?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                  <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }
   }
@@ -31,15 +35,19 @@ export const Add = () => {
   const airanimef = () => {
     if(!isSearch && render === 'airing'){
       return airanime?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                    <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }else{
       return searchR?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                  <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }
   }
@@ -48,15 +56,19 @@ export const Add = () => {
   const upcoming = () => {
     if(!isSearch && render === 'upcoming'){
       return upanime?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                  <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }else{
       return searchR?.map((anime) => {
-        return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+        return <div className='animec'><Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
                   <img src={anime.images.jpg.large_image_url} alt="" />
+                  <figcaption className='fig'>{anime.title}</figcaption>
               </Link>
+              </div>
       })
     }
   }

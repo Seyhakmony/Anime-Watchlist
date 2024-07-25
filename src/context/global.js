@@ -71,7 +71,7 @@ export const GlobalContextProvider = ({children}) => {
 
     const upcomingA = async() => {
         dispatch({type: loadAnime})
-        const response = await fetch(`${baseUrl}/top/anime?filter=upcoming`);
+        const response = await fetch(`${baseUrl}/top/anime?filter=upcoming&sfw`);
         const data = await response.json();
         dispatch({type: GETUPC, payload: data.data})
     }
@@ -79,7 +79,7 @@ export const GlobalContextProvider = ({children}) => {
 
     const airA = async () => {
         dispatch({type: loadAnime})
-        const response = await fetch(`${baseUrl}/top/anime?filter=airing`);
+        const response = await fetch(`${baseUrl}/top/anime?filter=airing&sfw`);
         const data = await response.json();
         dispatch({type: GETAIR, payload: data.data})
     }
@@ -88,7 +88,7 @@ export const GlobalContextProvider = ({children}) => {
     //searching
     const searchingA = async(anime) => {
         dispatch({type: loadAnime})
-        const response = await fetch(`https://api.jikan.moe/v4/anime?q=${anime}&order_by=popularity&sort=asc&sfw&type=tv&type=movie`);
+        const response = await fetch(`https://api.jikan.moe/v4/anime?q=${anime}&order_by=popularity&sfw&sort=asc&type=tv&type=tv`);
         const data = await response.json();
         dispatch({type: SEARCH, payload: data.data})
     }

@@ -22,80 +22,6 @@ body {
 
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-  
-  
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-  
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-  .brand-img {
-    max-width: 50px;
-    max-height: 25px;
-  }
-
-  .buttonall {
-    margin-right: 5%;
-  }
-
-  header .nav-links {
-    width: 100%; 
-  }
-
-  header .nav-links li {
-    margin-right: 0.1px;
-    margin-bottom: 10px; 
-  }
-
-  header .nav-links li:last-child {
-    margin-bottom: 0;
-  }
-
-  .buttonAdd {
-    font-size: 0.75rem;
-    padding: 0.3em 0.5em;
-    max-width: 35%;
-  }
-
-  .buttonAdd a {
-    font-size: 0.75rem;
-    padding: 0.2em 0.5em;
-    display: inline-block;
-  }
-
-
-  .inner-content{
-    gap: 10px;
-  }
-
-
-  
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-
 input:focus {
   outline: none;
 }
@@ -218,25 +144,29 @@ header a:hover {
     border-radius: 15px;
   }
 
-header .nav-links {
+.nav-links {
   padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
+
   align-items: center;
   gap: 10%;
+
 }
 
 header .nav-links li {
   display: inline-block;
   margin-right: 2px 0;
+  
 }
+
+
+
 .buttonall{
-  margin-right: 20%;
+  margin-right: 2px;
 }
-header .nav-links li:last-child {
-  margin-right: 10px;
-}
+
 
 /* Add Page */
 .add-content {
@@ -253,4 +183,117 @@ header .nav-links li:last-child {
   border: none;
   color: var(--white);
   font-size: 1.55rem;
+}
+
+
+
+
+@media (min-width: 300px) {
+  .container {
+    width: 285px;
+  }
+  .header .nav-links{
+    gap: 1%;
+  }
+  header .nav-links li:last-child {
+    margin-right: 20px;
+    
+  }
+  header .nav-links li:nth-child(1) a,
+  header .nav-links li:nth-child(2) a {
+  font-size: 0.75rem;
+}
+
+header .nav-links li:nth-child(1) a,
+header .nav-links li:nth-child(2) a {
+font-size: 1.5rem;
+}
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 650px;
+  }
+  
+  
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 870px;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1070px;
+  }
+
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  header .nav-links li:nth-child(1) a,
+  header .nav-links li:nth-child(2) a {
+  font-size: 1rem;
+}
+
+  .brand-img {
+    max-width: 50px;
+    max-height: 25px;
+  }
+
+  .buttonall {
+    margin-right: 5%;
+  }
+
+
+
+  header .nav-links {
+    width: 100%; 
+    gap: 10px;
+  }
+
+  header .nav-links li {
+    display: inline-block;
+    margin-right: 2px 0;
+    font-size: 0.5rem;
+    margin-bottom: 10px; 
+    
+  }
+
+  header .nav-links li:last-child {
+    margin-bottom: 0;
+
+  }
+
+  .buttonAdd {
+    font-size: 0.75rem;
+    padding: 0.3em 0.5em;
+    max-width: 35%;
+  }
+
+  .buttonAdd a {
+    font-size: 0.75rem;
+    padding: 0.2em 0.5em;
+    display: inline-block;
+  }
+
+
+  .inner-content{
+    gap: 10px;
+  }
+
+
+  
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
